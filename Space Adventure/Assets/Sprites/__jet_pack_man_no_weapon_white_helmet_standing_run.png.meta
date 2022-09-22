@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -151,7 +151,322 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: __jet_pack_man_no_weapon_white_helmet_standing_run_0
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 1281
+        width: 315
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d04bcbf9625afd46aeb0698ed541bb0
+      internalID: -544657838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_no_weapon_white_helmet_standing_run_1
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 1257
+        width: 284
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 878302a6e43508443b9ddd7b3b1254c5
+      internalID: -1052483782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_no_weapon_white_helmet_standing_run_2
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 1261
+        width: 275
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1f5e9aca28b2945ad7d2efc462075c
+      internalID: -895696317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_no_weapon_white_helmet_standing_run_3
+      rect:
+        serializedVersion: 2
+        x: 2358
+        y: 1246
+        width: 275
+        height: 533
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb1cb05bc90b1e4bb508b08358333f2
+      internalID: -1187695663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_no_weapon_white_helmet_standing_run_4
+      rect:
+        serializedVersion: 2
+        x: 3028
+        y: 1254
+        width: 299
+        height: 529
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1416e1e2cf00a64cb45ce337463f1d4
+      internalID: -1955528261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_no_weapon_white_helmet_standing_run_5
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 661
+        width: 319
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a84ad93f50016d54c977da6fede47238
+      internalID: 1465299909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_no_weapon_white_helmet_standing_run_6
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 685
+        width: 341
+        height: 505
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5333e9b60dfc24bb103e0429fddf5f
+      internalID: -1856053580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_no_weapon_white_helmet_standing_run_7
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 702
+        width: 366
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f7c854aab6b69147a6ba6f5ddacb7fb
+      internalID: 1058263819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_no_weapon_white_helmet_standing_run_8
+      rect:
+        serializedVersion: 2
+        x: 2275
+        y: 693
+        width: 361
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb42afd60cd6ab4e93c9291a038fcd6
+      internalID: -952095205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_no_weapon_white_helmet_standing_run_9
+      rect:
+        serializedVersion: 2
+        x: 2981
+        y: 668
+        width: 348
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0188cddfa709a46b3295013aa7620b
+      internalID: -1353543559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_no_weapon_white_helmet_standing_run_10
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 58
+        width: 326
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0552af4e0cddefc419e28f045e3e34d0
+      internalID: -1790271896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_no_weapon_white_helmet_standing_run_11
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 62
+        width: 280
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ac9c02232f65f4b8a129d27d5edfef
+      internalID: -713744128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_no_weapon_white_helmet_standing_run_12
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 60
+        width: 277
+        height: 529
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a102a57302528c46a106e69a9ccf78d
+      internalID: 713654210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_no_weapon_white_helmet_standing_run_13
+      rect:
+        serializedVersion: 2
+        x: 2356
+        y: 60
+        width: 277
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 441032832059d94468f3b85a7014545d
+      internalID: 2091291935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: __jet_pack_man_no_weapon_white_helmet_standing_run_14
+      rect:
+        serializedVersion: 2
+        x: 3023
+        y: 89
+        width: 301
+        height: 501
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae2ee508ea824f4d9caf3da8b003a43
+      internalID: 1000821775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -162,7 +477,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      __jet_pack_man_no_weapon_white_helmet_standing_run_7: 1058263819
+      __jet_pack_man_no_weapon_white_helmet_standing_run_11: -713744128
+      __jet_pack_man_no_weapon_white_helmet_standing_run_10: -1790271896
+      __jet_pack_man_no_weapon_white_helmet_standing_run_6: -1856053580
+      __jet_pack_man_no_weapon_white_helmet_standing_run_13: 2091291935
+      __jet_pack_man_no_weapon_white_helmet_standing_run_3: -1187695663
+      __jet_pack_man_no_weapon_white_helmet_standing_run_5: 1465299909
+      __jet_pack_man_no_weapon_white_helmet_standing_run_2: -895696317
+      __jet_pack_man_no_weapon_white_helmet_standing_run_14: 1000821775
+      __jet_pack_man_no_weapon_white_helmet_standing_run_4: -1955528261
+      __jet_pack_man_no_weapon_white_helmet_standing_run_12: 713654210
+      __jet_pack_man_no_weapon_white_helmet_standing_run_9: -1353543559
+      __jet_pack_man_no_weapon_white_helmet_standing_run_8: -952095205
+      __jet_pack_man_no_weapon_white_helmet_standing_run_0: -544657838
+      __jet_pack_man_no_weapon_white_helmet_standing_run_1: -1052483782
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

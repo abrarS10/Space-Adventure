@@ -12,7 +12,7 @@ public class Jetpack : MonoBehaviour
     Rigidbody2D myRigidbody;
     Animator myAnimator;
     PlayerMovement movement;
-    CapsuleCollider2D collider;
+    CapsuleCollider2D myCollider;
     public bool isGrounded;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class Jetpack : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         movement = GetComponent<PlayerMovement>();
-        collider = GetComponent<CapsuleCollider2D>();
+        myCollider = GetComponent<CapsuleCollider2D>();
     }
 
     // Update is called once per frame
@@ -35,7 +35,7 @@ public class Jetpack : MonoBehaviour
     }
 
     void checkGround(){
-        if(collider.IsTouchingLayers(LayerMask.GetMask("Ground"))){
+        if(myCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))){
             isGrounded = true;
         } else {
             isGrounded = false;
@@ -44,19 +44,22 @@ public class Jetpack : MonoBehaviour
     }
 
     void Fly(){
-        //TODO changes based on in air
-        if(!isGrounded){ 
-            movement.runSpeed = 2.5f;
-        } else {
-            movement.runSpeed = 5f;
-        }
 
+        changeMovementSpeed();
         isFlying = checkFlyInput();
 
         Vector2 playerVelocity = new Vector2((myRigidbody.velocity.x / 2f), flyInput * flySpeed);
         myRigidbody.AddForce(playerVelocity);
 
         myAnimator.SetBool("isFlying", isFlying);
+    }
+
+    void changeMovementSpeed(){
+        if(!isGrounded){ 
+            movement.runSpeed = 2.5f;
+        } else {
+            movement.runSpeed = 5f;
+        }
     }
 
     bool checkFlyInput(){

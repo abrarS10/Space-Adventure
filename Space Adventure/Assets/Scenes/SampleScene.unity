@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 1261644261}
   - component: {fileID: 1261644260}
   - component: {fileID: 1261644259}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1260,7 +1260,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 195964d2a74c45743b5b6f312d5f07a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flySpeed: 1
+  isFlying: 0
+  flySpeed: 2.5
+  isGrounded: 0
 --- !u!1 &1935625443
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,6 +1315,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1307934845904993809, guid: 423cd322af0b1ab499d6dfcefb1ad3dd, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307934845904993809, guid: 423cd322af0b1ab499d6dfcefb1ad3dd, type: 3}
+      propertyPath: m_GravityScale
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 1687161998885155677, guid: 423cd322af0b1ab499d6dfcefb1ad3dd, type: 3}
       propertyPath: runSpeed
       value: 5

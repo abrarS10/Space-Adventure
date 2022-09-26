@@ -15,9 +15,12 @@ GameObject:
   - component: {fileID: 1307934845904993809}
   - component: {fileID: 1687161998885155676}
   - component: {fileID: 1687161998885155677}
+  - component: {fileID: 1405441345}
+  - component: {fileID: 1405441346}
+  - component: {fileID: 1405441360}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,8 +142,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0.7
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -188,3 +191,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92c3754853c31674c98d9d2d67aeda5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  runSpeed: 5
+--- !u!114 &1405441345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687161999721972600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195964d2a74c45743b5b6f312d5f07a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFlying: 0
+  flySpeed: 1
+  fuelAmount: 100
+  fuelPerSecond: 5
+  isGrounded: 0
+  slider: {fileID: 0}
+--- !u!114 &1405441346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687161999721972600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bc12a50acf32d94aaea7f68249ef93e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullHeart: {fileID: 21300000, guid: fed24bd82cefc0c4a8ef64dab6231b53, type: 3}
+  emptyHeart: {fileID: 21300002, guid: fed24bd82cefc0c4a8ef64dab6231b53, type: 3}
+  damageKickback: {x: 10, y: 3}
+  health: 5
+  numOfHearts: 5
+  isInvincible: 0
+--- !u!114 &1405441360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687161999721972600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ef293267642aa4c93c67b21ca4bb9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materialCount: 0

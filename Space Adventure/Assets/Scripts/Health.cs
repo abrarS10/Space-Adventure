@@ -13,11 +13,14 @@ public class Health : MonoBehaviour
     public Sprite emptyHeart;
     CapsuleCollider2D myCollider;
     Rigidbody2D myRigidbody;
+    SpriteRenderer playerSprite;
     public Vector2 damageKickback = new Vector2(10f, 3f);
+    public bool isInvincible = false;
 
     void Start(){
         myCollider = GetComponent<CapsuleCollider2D>();
         myRigidbody = GetComponent<Rigidbody2D>();
+        playerSprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -47,7 +50,24 @@ public class Health : MonoBehaviour
     }
 
     void takeDamage(){
-        health--;
+        if(!isInvincible){
+            health--;
+        }
         myRigidbody.velocity = damageKickback;
+        StartCoroutine(enableInvincibility());
+        StartCoroutine(damageColor());
+    }
+
+    IEnumerator enableInvincibility(){
+        isInvincible = true;
+        yield return new WaitForSeconds(2);
+        isInvincible = false;
+    }
+
+     IEnumerator damageColor(){
+        playerSprite.color = Color.red;
+        yield return new WaitForSeconds(0.3f);
+        playerSprite.color = Color.white;
+
     }
 }

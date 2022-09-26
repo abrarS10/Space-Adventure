@@ -5,16 +5,15 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public int health;
-    public int numOfHearts;
-
-    public Image[] hearts;
-    public Sprite fullHeart;
-    public Sprite emptyHeart;
     CapsuleCollider2D myCollider;
     Rigidbody2D myRigidbody;
     SpriteRenderer playerSprite;
+    public Image[] hearts;
+    public Sprite fullHeart;
+    public Sprite emptyHeart;
     public Vector2 damageKickback = new Vector2(10f, 3f);
+    public int health;
+    public int numOfHearts;
     public bool isInvincible = false;
 
     void Start(){
@@ -26,11 +25,18 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        checkHazardContact();
+        updateHearts();       
+    }
+
+    void checkHazardContact(){
         if(myCollider.IsTouchingLayers(LayerMask.GetMask("Hazard"))){
             takeDamage();
         }
+    }
 
-        if(health > numOfHearts){
+    void updateHearts(){
+         if(health > numOfHearts){
             health = numOfHearts;
         }
         for (int i = 0; i < hearts.Length; i++){
@@ -60,7 +66,7 @@ public class Health : MonoBehaviour
 
     IEnumerator enableInvincibility(){
         isInvincible = true;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         isInvincible = false;
     }
 

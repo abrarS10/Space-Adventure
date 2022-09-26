@@ -12,16 +12,19 @@ public class Health : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
     CapsuleCollider2D myCollider;
+    Rigidbody2D myRigidbody;
+    public Vector2 damageKickback = new Vector2(10f, 3f);
 
     void Start(){
         myCollider = GetComponent<CapsuleCollider2D>();
+        myRigidbody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if(myCollider.IsTouchingLayers(LayerMask.GetMask("Hazard"))){
-            health--;
+            takeDamage();
         }
 
         if(health > numOfHearts){
@@ -41,5 +44,10 @@ public class Health : MonoBehaviour
                 hearts[i].enabled = false;
             }
         }
+    }
+
+    void takeDamage(){
+        health--;
+        myRigidbody.velocity = damageKickback;
     }
 }

@@ -11,10 +11,18 @@ public class Health : MonoBehaviour
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
+    CapsuleCollider2D myCollider;
+
+    void Start(){
+        myCollider = GetComponent<CapsuleCollider2D>();
+    }
 
     // Update is called once per frame
     void Update()
     {
+        if(myCollider.IsTouchingLayers(LayerMask.GetMask("Hazard"))){
+            health--;
+        }
 
         if(health > numOfHearts){
             health = numOfHearts;

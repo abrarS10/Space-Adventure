@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 
 public class Jetpack : MonoBehaviour
 {
     float flyInput;
     public bool isFlying;
-    [SerializeField] float flySpeed = 2.5f;
+    [SerializeField] float flySpeed = 1f;
     Rigidbody2D myRigidbody;
     Animator myAnimator;
     PlayerMovement movement;
@@ -16,6 +17,7 @@ public class Jetpack : MonoBehaviour
     public float fuelAmount = 100.0f;
     public float fuelPerSecond = 1.0f;
     public bool isGrounded;
+    public Slider slider;
     // Start is called before the first frame update
     void Start()
     {
@@ -78,6 +80,7 @@ public class Jetpack : MonoBehaviour
     void FuelConsumption(){
         if(flyInput == 1){
             fuelAmount -= fuelPerSecond * Time.deltaTime;
+            slider.value = fuelAmount;
         }
     }
 }

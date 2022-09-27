@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using TMPro;
 
 
 public class Jetpack : MonoBehaviour
@@ -21,6 +22,7 @@ public class Jetpack : MonoBehaviour
     public Slider slider;
     public float damageVelocity = -10.0f;
     public bool takeFallDamage = false;
+    public TMP_Text fuelPercentageText;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,6 +51,7 @@ public class Jetpack : MonoBehaviour
     void checkGround(){
         if(myCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))){
             isGrounded = true;
+            changeMovementSpeed();
             myAnimator.SetBool("isFlying", false);
             if (takeFallDamage){
                 playerHealth.takeFallDamage();
@@ -58,7 +61,7 @@ public class Jetpack : MonoBehaviour
         }
         myAnimator.SetBool("isGrounded", isGrounded);
     }
-
+    //TODO rename function (checkForFallDamage)
     void checkVelocity(){
         if (!isGrounded && myRigidbody.velocity.y <= damageVelocity){
             takeFallDamage = true;
@@ -70,7 +73,7 @@ public class Jetpack : MonoBehaviour
     void Fly(){
 
         changeMovementSpeed();
-        isFlying = checkFlyInput();
+        isFlying = checkFlyInput() && fuelAmount > 0.0f;
 
         Vector2 playerVelocity = new Vector2((myRigidbody.velocity.x / 2f), flyInput * flySpeed);
         myRigidbody.AddForce(playerVelocity);
@@ -97,6 +100,15 @@ public class Jetpack : MonoBehaviour
         if(flyInput == 1){
             fuelAmount -= fuelPerSecond * Time.deltaTime;
             slider.value = fuelAmount;
+            updateFuelText();
+        }
+    }
+
+    void updateFuelText(){
+        if (fuelAmount <= 0.0f){ 
+            fuelPercentageText.text = "0%";
+        } else {
+            fuelPercentageText.text = (fuelAmount).ToString("#.00") + "%";
         }
     }
 }

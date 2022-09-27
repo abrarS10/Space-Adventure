@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Health : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class Health : MonoBehaviour
     public int health;
     public int numOfHearts;
     public bool isInvincible = false;
+    public GameObject endMenu;
+    public TMP_Text gameOverText;
+
+    public 
 
     void Start(){
         myCollider = GetComponent<CapsuleCollider2D>();
@@ -59,10 +64,10 @@ public class Health : MonoBehaviour
     void takeDamage(){
         if(!isInvincible){
             health--;
+            StartCoroutine(damageColor());
         }
         myRigidbody.velocity = damageKickback;
         StartCoroutine(enableInvincibility());
-        StartCoroutine(damageColor());
     }
 
     public void takeFallDamage(){
@@ -72,11 +77,11 @@ public class Health : MonoBehaviour
 
     void Die(){
         if (health <= 0){
-            Debug.Log("Game Over");
             //TODO
             //Play death animation
-            //Destroy gameobject
-            //Show death screen UI
+            Time.timeScale = 0f;
+            gameOverText.text = "GAME OVER";
+            endMenu.SetActive(true);
         }
     }
 
@@ -90,6 +95,5 @@ public class Health : MonoBehaviour
         playerSprite.color = Color.red;
         yield return new WaitForSeconds(0.3f);
         playerSprite.color = Color.white;
-
     }
 }

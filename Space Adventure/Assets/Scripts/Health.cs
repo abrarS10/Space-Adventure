@@ -64,6 +64,11 @@ public class Health : MonoBehaviour
         StartCoroutine(damageColor());
     }
 
+    public void takeFallDamage(){
+        health--;
+        StartCoroutine(damageColor());
+    }
+
     IEnumerator enableInvincibility(){
         isInvincible = true;
         yield return new WaitForSeconds(1);

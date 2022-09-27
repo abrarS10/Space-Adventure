@@ -14,10 +14,13 @@ public class Jetpack : MonoBehaviour
     Animator myAnimator;
     PlayerMovement movement;
     CapsuleCollider2D myCollider;
+    Health playerHealth;
     public float fuelAmount = 100.0f;
     public float fuelPerSecond = 1.0f;
     public bool isGrounded;
     public Slider slider;
+    public float damageVelocity = -10.0f;
+    public bool takeFallDamage = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +28,7 @@ public class Jetpack : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         movement = GetComponent<PlayerMovement>();
         myCollider = GetComponent<CapsuleCollider2D>();
+        playerHealth = GetComponent<Health>();
     }
 
     // Update is called once per frame
@@ -35,6 +39,7 @@ public class Jetpack : MonoBehaviour
             FuelConsumption();
             Fly();
         }
+        checkVelocity();
     }
 
     void OnFlying(InputValue value){
@@ -45,10 +50,21 @@ public class Jetpack : MonoBehaviour
         if(myCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))){
             isGrounded = true;
             myAnimator.SetBool("isFlying", false);
+            if (takeFallDamage){
+                playerHealth.takeFallDamage();
+            }
         } else {
             isGrounded = false;
         }
         myAnimator.SetBool("isGrounded", isGrounded);
+    }
+
+    void checkVelocity(){
+        if (!isGrounded && myRigidbody.velocity.y <= damageVelocity){
+            takeFallDamage = true;
+        } else {
+            takeFallDamage = false;
+        }
     }
 
     void Fly(){

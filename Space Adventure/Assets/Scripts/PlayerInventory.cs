@@ -9,8 +9,10 @@ public class PlayerInventory : MonoBehaviour
     public int materialCount = 0;
     public const int requiredMaterials = 3;
     public TMP_Text numberOfMaterialsCollected;
+    public TMP_Text gameWinText;
+
     public bool triggerActive = false;
-    public GameObject rocketMessage;
+    public GameObject endMenu;
 
     void Start(){
         UpdateText();
@@ -18,21 +20,20 @@ public class PlayerInventory : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if (other.tag == "Interactable"){
             triggerActive = true;
-            rocketMessage.SetActive(true);
         }
     }
 
     void OnTriggerExit2D(Collider2D other){
         if (other.tag == "Interactable"){
             triggerActive = false;
-            rocketMessage.SetActive(false);
         }
     }
 
     void OnInteract(InputValue input){
         if(triggerActive && input.isPressed){
             if(materialCount >= requiredMaterials){
-                Debug.Log("You won!!!");
+                gameWinText.text = "YOU WON!";
+                endMenu.SetActive(true);
             } else {
                 Debug.Log("Not enough materials");
             }

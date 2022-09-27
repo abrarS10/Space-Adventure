@@ -64,10 +64,10 @@ public class Health : MonoBehaviour
     void takeDamage(){
         if(!isInvincible){
             health--;
+            StartCoroutine(damageColor());
         }
         myRigidbody.velocity = damageKickback;
         StartCoroutine(enableInvincibility());
-        StartCoroutine(damageColor());
     }
 
     public void takeFallDamage(){
@@ -95,6 +95,5 @@ public class Health : MonoBehaviour
         playerSprite.color = Color.red;
         yield return new WaitForSeconds(0.3f);
         playerSprite.color = Color.white;
-
     }
 }

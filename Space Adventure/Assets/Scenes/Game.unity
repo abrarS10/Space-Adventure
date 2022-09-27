@@ -4991,9 +4991,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1755579624}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: loadMenu
+      - m_Target: {fileID: 1755579625}
+        m_TargetAssemblyTypeName: GameEnd, Assembly-CSharp
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5144,6 +5144,7 @@ GameObject:
   - component: {fileID: 1755579621}
   - component: {fileID: 1755579620}
   - component: {fileID: 1755579624}
+  - component: {fileID: 1755579625}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5209,7 +5210,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1812256705
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1755579623
@@ -5250,6 +5251,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 681884121}
+--- !u!114 &1755579625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755579619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b585c9f512abc634cb309c0cf77c3259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1774360696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5552,9 +5565,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1755579624}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: loadMenu
+      - m_Target: {fileID: 1755579625}
+        m_TargetAssemblyTypeName: GameEnd, Assembly-CSharp
+        m_MethodName: returnToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5955,6 +5968,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1687161999721972606, guid: 423cd322af0b1ab499d6dfcefb1ad3dd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1687161999721972607, guid: 423cd322af0b1ab499d6dfcefb1ad3dd, type: 3}
+      propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

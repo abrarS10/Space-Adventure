@@ -51,6 +51,7 @@ public class Jetpack : MonoBehaviour
     void checkGround(){
         if(myCollider.IsTouchingLayers(LayerMask.GetMask("Ground"))){
             isGrounded = true;
+            changeMovementSpeed();
             myAnimator.SetBool("isFlying", false);
             if (takeFallDamage){
                 playerHealth.takeFallDamage();
@@ -72,7 +73,7 @@ public class Jetpack : MonoBehaviour
     void Fly(){
 
         changeMovementSpeed();
-        isFlying = checkFlyInput();
+        isFlying = checkFlyInput() && fuelAmount > 0.0f;
 
         Vector2 playerVelocity = new Vector2((myRigidbody.velocity.x / 2f), flyInput * flySpeed);
         myRigidbody.AddForce(playerVelocity);

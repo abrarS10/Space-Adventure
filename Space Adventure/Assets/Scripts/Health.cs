@@ -27,6 +27,7 @@ public class Health : MonoBehaviour
     {
         checkHazardContact();
         updateHearts();       
+        Die();
     }
 
     void checkHazardContact(){
@@ -62,6 +63,21 @@ public class Health : MonoBehaviour
         myRigidbody.velocity = damageKickback;
         StartCoroutine(enableInvincibility());
         StartCoroutine(damageColor());
+    }
+
+    public void takeFallDamage(){
+        health--;
+        StartCoroutine(damageColor());
+    }
+
+    void Die(){
+        if (health <= 0){
+            Debug.Log("Game Over");
+            //TODO
+            //Play death animation
+            //Destroy gameobject
+            //Show death screen UI
+        }
     }
 
     IEnumerator enableInvincibility(){

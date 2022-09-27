@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerInventory : MonoBehaviour
 {
     public int materialCount = 0;
-    public const int requiredMaterials = 2;
+    public const int requiredMaterials = 3;
     public bool triggerActive = false;
     void OnTriggerEnter2D(Collider2D other){
         if (other.tag == "Interactable"){

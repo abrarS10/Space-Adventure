@@ -5211,7 +5211,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: -1812256705
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &1755579623
 RectTransform:
@@ -5989,6 +5989,14 @@ PrefabInstance:
       propertyPath: numberOfMaterialsCollected
       value: 
       objectReference: {fileID: 1502977256}
+    - target: {fileID: 1307934845904993809, guid: 423cd322af0b1ab499d6dfcefb1ad3dd, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307934845904993809, guid: 423cd322af0b1ab499d6dfcefb1ad3dd, type: 3}
+      propertyPath: m_GravityScale
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 1687161999721972600, guid: 423cd322af0b1ab499d6dfcefb1ad3dd, type: 3}
       propertyPath: m_Name
       value: Player
@@ -6039,15 +6047,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1687161999721972607, guid: 423cd322af0b1ab499d6dfcefb1ad3dd, type: 3}
       propertyPath: m_SortingLayer
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1687161999721972607, guid: 423cd322af0b1ab499d6dfcefb1ad3dd, type: 3}
       propertyPath: m_SortingOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1687161999721972607, guid: 423cd322af0b1ab499d6dfcefb1ad3dd, type: 3}
       propertyPath: m_SortingLayerID
-      value: 0
+      value: 1178299445
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 423cd322af0b1ab499d6dfcefb1ad3dd, type: 3}

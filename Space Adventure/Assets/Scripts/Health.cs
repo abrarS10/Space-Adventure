@@ -66,6 +66,7 @@ public class Health : MonoBehaviour
             health--;
             StartCoroutine(damageColor());
         }
+        FindObjectOfType<AudioManager>().Play("playerDeath");
         myRigidbody.velocity = damageKickback;
         StartCoroutine(enableInvincibility());
     }
@@ -79,8 +80,9 @@ public class Health : MonoBehaviour
         if (health <= 0){
             //TODO
             //Play death animation
-            Time.timeScale = 0f;
+            //Time.timeScale = 0f;
             gameOverText.text = "GAME OVER";
+            FindObjectOfType<AudioManager>().Play("playerDeath");
             endMenu.SetActive(true);
         }
     }

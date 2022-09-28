@@ -97,10 +97,12 @@ public class Jetpack : MonoBehaviour
         }
     }
     void FuelConsumption(){
-        if(flyInput == 1){
+        if(flyInput == 1 && fuelAmount >= 0){
             fuelAmount -= fuelPerSecond * Time.deltaTime;
             slider.value = fuelAmount;
             updateFuelText();
+            //FindObjectOfType<AudioManager>().Play("flying");
+
         }
     }
 

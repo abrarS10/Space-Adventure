@@ -8,6 +8,7 @@ public class MaterialPickup : MonoBehaviour
         if (other.tag == "Player"){
             other.GetComponent<PlayerInventory>().materialCount++;
             other.GetComponent<PlayerInventory>().UpdateText();
+            FindObjectOfType<AudioManager>().Play("materialCollect");
             Destroy(gameObject);
         }
     }

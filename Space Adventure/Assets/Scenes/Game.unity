@@ -5413,6 +5413,18 @@ MonoBehaviour:
     pitch: 1.45
     source: {fileID: 0}
     loop: 0
+  - clip: {fileID: 8300000, guid: 0605a6f45d219874c84d5d982c3d595a, type: 3}
+    name: materialCollect
+    volume: 0.791
+    pitch: 1.45
+    source: {fileID: 0}
+    loop: 0
+  - clip: {fileID: 8300000, guid: 864acd04f2f35424cb2bc0d79368c6bb, type: 3}
+    name: flying
+    volume: 0.232
+    pitch: 1.45
+    source: {fileID: 0}
+    loop: 1
 --- !u!1 &1935625443
 GameObject:
   m_ObjectHideFlags: 0

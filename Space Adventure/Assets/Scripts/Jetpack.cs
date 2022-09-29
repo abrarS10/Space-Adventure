@@ -21,6 +21,7 @@ public class Jetpack : MonoBehaviour
     public bool isGrounded;
     public Slider slider;
     public float damageVelocity = -10.0f;
+    public float maxVelocity = 6f;
     public bool takeFallDamage = false;
     public TMP_Text fuelPercentageText;
     // Start is called before the first frame update
@@ -78,8 +79,14 @@ public class Jetpack : MonoBehaviour
         Vector2 playerVelocity = new Vector2((myRigidbody.velocity.x / 2f), flyInput * flySpeed);
         myRigidbody.AddForce(playerVelocity);
 
+        if(myRigidbody.velocity.y > maxVelocity)
+             {  
+                myRigidbody.velocity *= 0.99f;
+             }
+
         myAnimator.SetBool("isFlying", isFlying);
     }
+
 
     void changeMovementSpeed(){
         if(!isGrounded){ 
@@ -97,10 +104,12 @@ public class Jetpack : MonoBehaviour
         }
     }
     void FuelConsumption(){
-        if(flyInput == 1){
+        if(flyInput == 1 && fuelAmount >= 0){
             fuelAmount -= fuelPerSecond * Time.deltaTime;
             slider.value = fuelAmount;
             updateFuelText();
+            //FindObjectOfType<AudioManager>().Play("flying");
+
         }
     }
 

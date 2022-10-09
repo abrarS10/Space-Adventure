@@ -15,8 +15,8 @@ TagManager:
   - Ground
   - Hazard
   - Interactable
-  - 
-  - 
+  - Player
+  - Background
   - 
   - 
   - 
@@ -42,8 +42,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
+  - name: Background main
     uniqueID: 3117036411
+    locked: 0
+  - name: Background 1
+    uniqueID: 1100695345
+    locked: 0
+  - name: Background 2
+    uniqueID: 2503246575
+    locked: 0
+  - name: Background 3
+    uniqueID: 2907979321
     locked: 0
   - name: Water
     uniqueID: 2571255773
